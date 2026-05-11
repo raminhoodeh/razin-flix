@@ -1,12 +1,12 @@
 # 🎬 RazinFlix
 
-> A self-maintaining, AI-enriched personal streaming platform — converted from a spreadsheet into a Netflix-fidelity experience.
+> A self-maintaining, AI-enriched personal streaming platform - converted from a spreadsheet into a Netflix-fidelity experience.
 
 ---
 
 ## Overview
 
-RazinFlix transforms a personal film library — originally maintained as a spreadsheet — into a production-grade streaming UI indistinguishable from Netflix. It is not a UI skin over an existing service. Every film is autonomously ingested, enriched, validated, and maintained by a multi-API AI pipeline, with zero manual data entry required beyond typing a film title.
+RazinFlix transforms a personal film library - originally maintained as a spreadsheet - into a production-grade streaming UI indistinguishable from Netflix. It is not a UI skin over an existing service. Every film is autonomously ingested, enriched, validated, and maintained by a multi-API AI pipeline, with zero manual data entry required beyond typing a film title.
 
 Built as a feature within the [nsso](https://nsso.com) platform, RazinFlix is a showcase of what happens when a personal passion project is engineered with production-level discipline.
 
@@ -31,8 +31,8 @@ When an admin types a film title, four APIs fire in parallel to fully enrich the
 |---|---|
 | **TMDB API** | Fetches metadata: poster, release year, director, IMDb rating |
 | **YouTube Data API v3** | Resolves the official trailer using a query engineered to exclude reviews and reaction videos |
-| **Google Cloud Vision OCR** | Validates the poster at the pixel level — scans the `.jpg` image matrix to confirm the English-language title physically appears in the artwork, rejecting blank or foreign-language TMDB placeholders |
-| **Gemini 2.5 Flash** | Generates a 2-sentence atmospheric plot summary and taxonomically assigns the film to one of 14 curated categories — overriding TMDB's generic genre tags entirely |
+| **Google Cloud Vision OCR** | Validates the poster at the pixel level - scans the `.jpg` image matrix to confirm the English-language title physically appears in the artwork, rejecting blank or foreign-language TMDB placeholders |
+| **Gemini 2.5 Flash** | Generates a 2-sentence atmospheric plot summary and taxonomically assigns the film to one of 14 curated categories - overriding TMDB's generic genre tags entirely |
 
 **The result:** One text input → a fully enriched, categorised, trailer-linked, poster-validated film entry. No manual data entry.
 
@@ -40,7 +40,7 @@ When an admin types a film title, four APIs fire in parallel to fully enrich the
 
 ### 3. Self-Healing Database Architecture
 
-RazinFlix doesn't just ingest data — it actively maintains its own integrity:
+RazinFlix doesn't just ingest data - it actively maintains its own integrity:
 
 - **Update Mode** — A dedicated admin view that programmatically surfaces films with missing posters or trailers to the top of the grid, making data gaps immediately visible
 - **Live poster health checks** — On entering Update Mode, the frontend batch-validates every poster URL against a 4-second timeout and flags broken links in real time
@@ -107,7 +107,7 @@ create table razinflix_films (
 
 ## In One Sentence
 
-> *RazinFlix converts a personal film spreadsheet into a self-maintaining Netflix clone — a 4-API AI pipeline validates posters at the pixel level, writes descriptions, resolves trailers, and enforces a curated taxonomy, while autonomous scripts continuously repair and re-classify the database without human intervention.*
+> *RazinFlix converts a personal film spreadsheet into a self-maintaining Netflix clone - a 4-API AI pipeline validates posters at the pixel level, writes descriptions, resolves trailers, and enforces a curated taxonomy, while autonomous scripts continuously repair and re-classify the database without human intervention.*
 
 ---
 
